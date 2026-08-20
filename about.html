@@ -28,7 +28,7 @@
         <a href="services.html" class="text-white/70 hover:text-white transition-colors font-medium text-sm">Services</a>
         <a href="contact.html" class="btn-primary px-6 py-2.5 rounded-sm font-bold text-sm transition-colors">Request a Quote</a>
       </div>
-      <button id="mobile-menu-btn" class="md:hidden text-white p-2"><i data-lucide="menu" class="w-6 h-6"></i></button>
+      <button id="mobile-menu-btn" class="md:hidden text-white p-2 rounded-lg hover:bg-white/10" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-menu"><i data-lucide="menu" class="w-6 h-6"></i></button>
     </div>
   </div>
   <div id="mobile-menu" class="hidden md:hidden bg-ironstone border-t border-white/10">
@@ -233,11 +233,37 @@
 
 <script>
   lucide.createIcons();
+
   const btn = document.getElementById('mobile-menu-btn');
   const menu = document.getElementById('mobile-menu');
-  btn.addEventListener('click', () => menu.classList.toggle('hidden'));
   const navbar = document.getElementById('navbar');
-  window.addEventListener('scroll', () => navbar.classList.toggle('nav-scrolled', window.scrollY > 50));
+
+  if (btn && menu) {
+    const setMenu = (open) => {
+      menu.classList.toggle('hidden', !open);
+      btn.setAttribute('aria-expanded', String(open));
+      btn.setAttribute('aria-label', open ? 'Close navigation menu' : 'Open navigation menu');
+    };
+
+    btn.addEventListener('click', () => {
+      setMenu(menu.classList.contains('hidden'));
+    });
+
+    menu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => setMenu(false));
+    });
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') setMenu(false);
+    });
+  }
+
+  const updateNav = () => {
+    if (navbar) navbar.classList.toggle('nav-scrolled', window.scrollY > 30);
+  };
+
+  updateNav();
+  window.addEventListener('scroll', updateNav, { passive: true });
 </script>
 </body>
 </html>
