@@ -3,19 +3,31 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Services | Madzonga Holdings</title>
-<meta name="description" content="Building and civil construction, renovations and refurbishment, electrical and mechanical installations — delivered by Madzonga Holdings across South Africa.">
+<title>Madzonga Holdings | Construction &amp; Civil Works, South Africa</title>
+<meta name="description" content="Madzonga Holdings is a South African construction group delivering building, civil, renovation and installation work for residential, commercial and public-sector clients.">
 <script src="https://cdn.tailwindcss.com"></script>
 <script src="https://unpkg.com/lucide@latest"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 <script>
-  tailwind.config = { theme: { extend: { colors: { ironstone: '#102A3B', ochre: '#FF3131', steel: '#0B73B0', concrete: '#F2F4F6' } } } }
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          ironstone: '#102A3B',
+          ochre: '#FF3131',
+          steel: '#0B73B0',
+          concrete: '#F2F4F6',
+        }
+      }
+    }
+  }
 </script>
 </head>
 <body class="text-ink">
 
+<!-- Navigation -->
 <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-ironstone/95 border-b border-white/10">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex justify-between items-center h-20">
@@ -23,140 +35,261 @@
         <img src="images/logo.png" alt="Madzonga Holdings" class="h-14 w-auto">
       </a>
       <div class="hidden md:flex items-center gap-8">
-        <a href="index.html" class="text-white/70 hover:text-white transition-colors font-medium text-sm">Home</a>
+        <a href="index.html" class="text-ochre font-semibold text-sm">Home</a>
         <a href="about.html" class="text-white/70 hover:text-white transition-colors font-medium text-sm">About</a>
-        <a href="services.html" class="text-ochre font-semibold text-sm">Services</a>
+        <a href="services.html" class="text-white/70 hover:text-white transition-colors font-medium text-sm">Services</a>
         <a href="contact.html" class="btn-primary px-6 py-2.5 rounded-sm font-bold text-sm transition-colors">Request a Quote</a>
       </div>
-      <button id="mobile-menu-btn" class="md:hidden text-white p-2 rounded-lg hover:bg-white/10" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-menu"><i data-lucide="menu" class="w-6 h-6"></i></button>
+      <button id="mobile-menu-btn" class="md:hidden text-white p-2">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
     </div>
   </div>
   <div id="mobile-menu" class="hidden md:hidden bg-ironstone border-t border-white/10">
     <div class="px-4 pt-2 pb-6 space-y-1">
-      <a href="index.html" class="block px-3 py-3 text-white/70">Home</a>
+      <a href="index.html" class="block px-3 py-3 text-ochre font-semibold">Home</a>
       <a href="about.html" class="block px-3 py-3 text-white/70">About</a>
-      <a href="services.html" class="block px-3 py-3 text-ochre font-semibold">Services</a>
+      <a href="services.html" class="block px-3 py-3 text-white/70">Services</a>
       <a href="contact.html" class="block px-3 py-3 btn-primary rounded-sm text-center font-bold mt-3">Request a Quote</a>
     </div>
   </div>
 </nav>
 
-<!-- Header -->
-<section class="pt-40 pb-20 grain-bg text-center">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <span class="eyebrow">What We Offer</span>
-    <h1 class="text-4xl md:text-6xl font-black text-white mt-3 mb-6" style="font-family:'Archivo',sans-serif;">Three divisions, one contract.</h1>
-    <p class="text-xl text-white/70 max-w-3xl mx-auto">Building, civil, renovation and installation work for residential, commercial and public-sector clients across South Africa.</p>
-  </div>
-</section>
-
-<!-- Building & Civil -->
-<section id="building-civil" class="py-24 bg-white">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="grid lg:grid-cols-2 gap-16 items-center">
-      <div class="order-2 lg:order-1">
-        <div class="inline-flex items-center gap-2 bg-ochre/10 text-ochre rounded-sm px-4 py-1.5 mb-6 text-sm font-semibold">
-          <i data-lucide="building-2" class="w-4 h-4"></i> Division 01
-        </div>
-        <h2 class="text-3xl md:text-4xl font-black text-ink mb-6" style="font-family:'Archivo',sans-serif;">Building &amp; Civil Construction</h2>
-        <p class="text-ink-soft text-lg mb-6">New-build construction from foundation to handover, plus the civil engineering work that goes with it — earthworks, roads, stormwater and bulk services for residential estates, commercial developments and municipal projects.</p>
-        <div class="space-y-4 mb-8">
-          <div class="flex items-start gap-4">
-            <div class="w-9 h-9 bg-ochre/10 rounded-sm flex items-center justify-center flex-shrink-0"><i data-lucide="home" class="w-4 h-4 text-ochre"></i></div>
-            <div><h4 class="font-bold text-ink mb-1 text-sm">Residential &amp; commercial new-build</h4><p class="text-ink-soft text-sm">Full turnkey construction, structural and finishing work.</p></div>
-          </div>
-          <div class="flex items-start gap-4">
-            <div class="w-9 h-9 bg-ochre/10 rounded-sm flex items-center justify-center flex-shrink-0"><i data-lucide="route" class="w-4 h-4 text-ochre"></i></div>
-            <div><h4 class="font-bold text-ink mb-1 text-sm">Earthworks &amp; roads</h4><p class="text-ink-soft text-sm">Site clearing, bulk earthworks, access roads and paving.</p></div>
-          </div>
-          <div class="flex items-start gap-4">
-            <div class="w-9 h-9 bg-ochre/10 rounded-sm flex items-center justify-center flex-shrink-0"><i data-lucide="droplets" class="w-4 h-4 text-ochre"></i></div>
-            <div><h4 class="font-bold text-ink mb-1 text-sm">Stormwater &amp; bulk services</h4><p class="text-ink-soft text-sm">Drainage, sewer and water reticulation for new developments.</p></div>
-          </div>
-        </div>
-        <a href="contact.html" class="inline-flex items-center gap-2 bg-ironstone hover:bg-black text-white font-bold px-6 py-3 rounded-sm transition-colors">Request Consultation <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+<!-- Hero -->
+<section class="grain-bg min-h-screen flex items-center pt-20 relative overflow-hidden">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 grid lg:grid-cols-5 gap-12 items-center relative z-10">
+    <div class="lg:col-span-3">
+      <div class="inline-flex items-center gap-2 border border-ochre/40 rounded-sm px-4 py-1.5 mb-8">
+        <span class="w-1.5 h-1.5 bg-ochre"></span>
+        <span class="text-white/80 text-xs font-semibold uppercase tracking-[0.15em]">Est. 2010 &middot; Johannesburg, Gauteng</span>
       </div>
-      <div class="order-1 lg:order-2 blueprint-mark p-3">
-        <img src="images/project-towers.png" alt="Civil construction site" class="rounded-sm shadow-2xl w-full object-cover h-[420px]">
+      <h1 class="text-5xl md:text-6xl lg:text-7xl font-black text-white leading-[1.02] mb-6" style="font-family:'Archivo',sans-serif;">
+        We build what South Africa is standing on.
+      </h1>
+      <p class="text-lg md:text-xl text-white/70 mb-10 leading-relaxed max-w-xl">
+        Madzonga Holdings delivers building construction, civil works, renovations and installations for residential, commercial and public-sector clients — on time, on budget, to spec.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4">
+        <a href="contact.html" class="inline-flex items-center justify-center gap-2 btn-primary text-base font-bold px-8 py-4 rounded-sm transition-colors">
+          Start a Project <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </a>
+        <a href="services.html" class="inline-flex items-center justify-center gap-2 bg-transparent border border-white/25 hover:border-white/60 text-white text-base font-semibold px-8 py-4 rounded-sm transition-colors">
+          See Our Work
+        </a>
+      </div>
+
+      <div class="grid grid-cols-3 gap-6 mt-16 pt-8 border-t border-white/10 max-w-xl">
+        <div>
+          <div class="text-3xl md:text-4xl font-black text-white" style="font-family:'Archivo',sans-serif;">15+</div>
+          <div class="text-white/50 text-xs uppercase tracking-wide mt-1">Years Trading</div>
+        </div>
+        <div>
+          <div class="text-3xl md:text-4xl font-black text-white" style="font-family:'Archivo',sans-serif;">120+</div>
+          <div class="text-white/50 text-xs uppercase tracking-wide mt-1">Projects Delivered</div>
+        </div>
+        <div>
+          <div class="text-3xl md:text-4xl font-black text-white" style="font-family:'Archivo',sans-serif;">4</div>
+          <div class="text-white/50 text-xs uppercase tracking-wide mt-1">Provinces Active</div>
+        </div>
       </div>
     </div>
-  </div>
-</section>
 
-<!-- Renovations -->
-<section id="renovations" class="py-24 bg-[#F7F4EE]">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="grid lg:grid-cols-2 gap-16 items-center">
+    <div class="lg:col-span-2 relative hidden lg:block">
       <div class="blueprint-mark p-3">
-        <img src="images/service-renovations-ceiling.png" alt="Interior renovation and ceiling finishing" class="rounded-sm shadow-2xl w-full object-cover h-[420px]">
+        <img src="images/hero-crane-sunset.png" alt="Madzonga Holdings construction site at sunset" class="rounded-sm w-full h-[560px] object-cover">
       </div>
-      <div>
-        <div class="inline-flex items-center gap-2 bg-ochre/10 text-ochre rounded-sm px-4 py-1.5 mb-6 text-sm font-semibold">
-          <i data-lucide="hammer" class="w-4 h-4"></i> Division 02
-        </div>
-        <h2 class="text-3xl md:text-4xl font-black text-ink mb-6" style="font-family:'Archivo',sans-serif;">Renovations &amp; Refurbishment</h2>
-        <p class="text-ink-soft text-lg mb-6">Additions, upgrades and full refurbishments for existing commercial and residential properties — including the structural remediation and compliance work older buildings often need.</p>
-        <div class="grid sm:grid-cols-2 gap-4 mb-8">
-          <div class="bg-white p-4 rounded-sm border border-black/5">
-            <i data-lucide="home" class="w-5 h-5 text-ochre mb-2"></i>
-            <h4 class="font-bold text-ink mb-1 text-sm">Home extensions</h4>
-            <p class="text-ink-soft text-sm">Additions, second storeys, granny flats.</p>
-          </div>
-          <div class="bg-white p-4 rounded-sm border border-black/5">
-            <i data-lucide="warehouse" class="w-5 h-5 text-ochre mb-2"></i>
-            <h4 class="font-bold text-ink mb-1 text-sm">Commercial fit-outs</h4>
-            <p class="text-ink-soft text-sm">Office and retail strip-out and rebuild.</p>
-          </div>
-          <div class="bg-white p-4 rounded-sm border border-black/5">
-            <i data-lucide="paint-bucket" class="w-5 h-5 text-ochre mb-2"></i>
-            <h4 class="font-bold text-ink mb-1 text-sm">Finishes &amp; cosmetic upgrades</h4>
-            <p class="text-ink-soft text-sm">Painting, flooring, cladding and joinery.</p>
-          </div>
-          <div class="bg-white p-4 rounded-sm border border-black/5">
-            <i data-lucide="ruler" class="w-5 h-5 text-ochre mb-2"></i>
-            <h4 class="font-bold text-ink mb-1 text-sm">Structural remediation</h4>
-            <p class="text-ink-soft text-sm">Crack repair, damp-proofing, waterproofing.</p>
-          </div>
-        </div>
-        <a href="contact.html" class="inline-flex items-center gap-2 bg-ironstone hover:bg-black text-white font-bold px-6 py-3 rounded-sm transition-colors">Discuss Your Project <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+      <div class="absolute -bottom-6 -left-6 bg-ochre text-white p-5 rounded-sm shadow-xl max-w-[210px]">
+        <div class="text-sm font-semibold uppercase tracking-wide opacity-90">Currently on site</div>
+        <div class="text-lg font-bold mt-1">Midrand Logistics Park — Phase 2</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Electrical & Mechanical -->
-<section id="electrical-mechanical" class="py-24 bg-white">
+<!-- Divisions -->
+<section class="py-24 bg-paper">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-2xl mb-16">
+      <span class="eyebrow">What We Do</span>
+      <h2 class="text-4xl md:text-5xl font-black text-ink mt-3 mb-4" style="font-family:'Archivo',sans-serif;">Three divisions, one site team.</h2>
+      <p class="text-ink-soft text-lg">Madzonga Holdings runs as a single group with specialist divisions — so a client gets one point of contact for building, civil and installation work instead of juggling three contractors.</p>
+    </div>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="group card-hover bg-white rounded-sm p-8 border border-black/5">
+        <div class="w-12 h-12 bg-ochre/10 rounded-sm flex items-center justify-center mb-6">
+          <i data-lucide="building-2" class="w-6 h-6 text-ochre"></i>
+        </div>
+        <h3 class="text-xl font-bold text-ink mb-3">Building &amp; Civil Construction</h3>
+        <p class="text-ink-soft mb-6 text-sm leading-relaxed">New-build construction, structural work, earthworks and civil engineering for residential estates, commercial developments and municipal infrastructure.</p>
+        <a href="services.html#building-civil" class="inline-flex items-center gap-2 text-ochre font-semibold text-sm">Learn more <i data-lucide="arrow-right" class="w-4 h-4 transition-transform group-hover:translate-x-1"></i></a>
+      </div>
+      <div class="group card-hover bg-white rounded-sm p-8 border border-black/5">
+        <div class="w-12 h-12 bg-ochre/10 rounded-sm flex items-center justify-center mb-6">
+          <i data-lucide="hammer" class="w-6 h-6 text-ochre"></i>
+        </div>
+        <h3 class="text-xl font-bold text-ink mb-3">Renovations &amp; Refurbishment</h3>
+        <p class="text-ink-soft mb-6 text-sm leading-relaxed">Additions, upgrades and full refurbishments for existing commercial and residential properties, including compliance and structural remediation.</p>
+        <a href="services.html#renovations" class="inline-flex items-center gap-2 text-ochre font-semibold text-sm">Learn more <i data-lucide="arrow-right" class="w-4 h-4 transition-transform group-hover:translate-x-1"></i></a>
+      </div>
+      <div class="group card-hover bg-white rounded-sm p-8 border border-black/5">
+        <div class="w-12 h-12 bg-ochre/10 rounded-sm flex items-center justify-center mb-6">
+          <i data-lucide="plug-zap" class="w-6 h-6 text-ochre"></i>
+        </div>
+        <h3 class="text-xl font-bold text-ink mb-3">Electrical &amp; Mechanical</h3>
+        <p class="text-ink-soft mb-6 text-sm leading-relaxed">Wiring, backup power and solar installs, HVAC and plumbing — installed by our own in-house teams and signed off to code.</p>
+        <a href="services.html#electrical-mechanical" class="inline-flex items-center gap-2 text-ochre font-semibold text-sm">Learn more <i data-lucide="arrow-right" class="w-4 h-4 transition-transform group-hover:translate-x-1"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Why choose us -->
+<section class="py-24 grain-bg">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="grid lg:grid-cols-2 gap-16 items-center">
-      <div class="order-2 lg:order-1">
-        <div class="inline-flex items-center gap-2 bg-ochre/10 text-ochre rounded-sm px-4 py-1.5 mb-6 text-sm font-semibold">
-          <i data-lucide="plug-zap" class="w-4 h-4"></i> Division 03
+      <div>
+        <span class="eyebrow">Why Madzonga</span>
+        <h2 class="text-4xl md:text-5xl font-black text-white mt-3 mb-6" style="font-family:'Archivo',sans-serif;">Built on paperwork, not just concrete.</h2>
+        <p class="text-white/70 text-lg mb-8 leading-relaxed">Most construction complaints come down to the same three things: missed deadlines, unclear costs, and no one answering the phone. We built our process around fixing exactly those.</p>
+        <div class="space-y-6">
+          <div class="flex items-start gap-4">
+            <div class="w-10 h-10 bg-ochre/20 rounded-sm flex items-center justify-center flex-shrink-0">
+              <i data-lucide="file-check-2" class="w-5 h-5 text-ochre"></i>
+            </div>
+            <div>
+              <h4 class="text-white font-bold mb-1">Fixed-scope quoting</h4>
+              <p class="text-white/60 text-sm">Every quote itemises labour, materials and timeline before work starts — no surprise variations.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-4">
+            <div class="w-10 h-10 bg-ochre/20 rounded-sm flex items-center justify-center flex-shrink-0">
+              <i data-lucide="users" class="w-5 h-5 text-ochre"></i>
+            </div>
+            <div>
+              <h4 class="text-white font-bold mb-1">One site manager, start to finish</h4>
+              <p class="text-white/60 text-sm">A single accountable manager runs your project across every division involved.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-4">
+            <div class="w-10 h-10 bg-ochre/20 rounded-sm flex items-center justify-center flex-shrink-0">
+              <i data-lucide="shield-check" class="w-5 h-5 text-ochre"></i>
+            </div>
+            <div>
+              <h4 class="text-white font-bold mb-1">Compliant and insured</h4>
+              <p class="text-white/60 text-sm">CIDB registered, fully insured teams, and NHBRC-enrolled residential builds.</p>
+            </div>
+          </div>
         </div>
-        <h2 class="text-3xl md:text-4xl font-black text-ink mb-6" style="font-family:'Archivo',sans-serif;">Electrical &amp; Mechanical</h2>
-        <p class="text-ink-soft text-lg mb-6">Wiring, backup power and solar installations, HVAC and plumbing — installed by our own certified electricians and plumbers and signed off to code, on the same schedule as the building work.</p>
-        <ul class="space-y-4 mb-8">
-          <li class="flex items-start gap-3">
-            <i data-lucide="check-circle" class="w-5 h-5 text-ochre flex-shrink-0 mt-0.5"></i>
-            <div><span class="font-bold text-ink text-sm">Wiring &amp; certificates of compliance</span><p class="text-ink-soft text-sm mt-1">New installations and COC inspections for resale or rental.</p></div>
-          </li>
-          <li class="flex items-start gap-3">
-            <i data-lucide="check-circle" class="w-5 h-5 text-ochre flex-shrink-0 mt-0.5"></i>
-            <div><span class="font-bold text-ink text-sm">Solar &amp; backup power</span><p class="text-ink-soft text-sm mt-1">Grid-tied and off-grid solar, inverters and battery backup.</p></div>
-          </li>
-          <li class="flex items-start gap-3">
-            <i data-lucide="check-circle" class="w-5 h-5 text-ochre flex-shrink-0 mt-0.5"></i>
-            <div><span class="font-bold text-ink text-sm">HVAC</span><p class="text-ink-soft text-sm mt-1">Ducted and split-unit systems for homes and offices.</p></div>
-          </li>
-          <li class="flex items-start gap-3">
-            <i data-lucide="check-circle" class="w-5 h-5 text-ochre flex-shrink-0 mt-0.5"></i>
-            <div><span class="font-bold text-ink text-sm">Plumbing</span><p class="text-ink-soft text-sm mt-1">Reticulation, fittings and geyser installations.</p></div>
-          </li>
-        </ul>
-        <a href="contact.html" class="inline-flex items-center gap-2 bg-ironstone hover:bg-black text-white font-bold px-6 py-3 rounded-sm transition-colors">Start Planning <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
       </div>
-      <div class="order-1 lg:order-2 blueprint-mark p-3">
-        <img src="images/service-electrical-wiring.png" alt="Electrical wiring installation" class="rounded-sm shadow-2xl w-full object-cover h-[420px]">
+      <div class="relative blueprint-mark p-3">
+        <img src="images/team-blockwork.png" alt="Madzonga Holdings site team laying blockwork" class="w-full rounded-sm shadow-2xl object-cover h-[420px]">
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- Featured projects -->
+<section class="py-24 bg-paper">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-wrap justify-between items-end gap-6 mb-16">
+      <div class="max-w-xl">
+        <span class="eyebrow">Our Work</span>
+        <h2 class="text-4xl md:text-5xl font-black text-ink mt-3" style="font-family:'Archivo',sans-serif;">Recent projects</h2>
+      </div>
+      <a href="services.html" class="text-ochre font-semibold text-sm inline-flex items-center gap-2">View all services <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+    </div>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="group cursor-pointer">
+        <div class="relative overflow-hidden rounded-sm mb-4">
+          <img src="images/project-towers.png" alt="Midrand Logistics Park" class="w-full h-64 object-cover transform group-hover:scale-105 transition-transform duration-500">
+          <span class="absolute top-4 left-4 bg-ochre text-white text-xs font-bold px-3 py-1 rounded-sm">Civil &amp; Building</span>
+        </div>
+        <h3 class="text-lg font-bold text-ink mb-1">Midrand Logistics Park</h3>
+        <p class="text-ink-soft text-sm">14,000m² warehouse and yard development, Gauteng — in progress.</p>
+      </div>
+      <div class="group cursor-pointer">
+        <div class="relative overflow-hidden rounded-sm mb-4">
+          <img src="images/project-refurb-plaster.png" alt="Sandton office refurbishment" class="w-full h-64 object-cover transform group-hover:scale-105 transition-transform duration-500">
+          <span class="absolute top-4 left-4 bg-steel text-white text-xs font-bold px-3 py-1 rounded-sm">Refurbishment</span>
+        </div>
+        <h3 class="text-lg font-bold text-ink mb-1">Sandton Office Refurbishment</h3>
+        <p class="text-ink-soft text-sm">Full interior strip-out and rebuild of a 6-floor commercial block.</p>
+      </div>
+      <div class="group cursor-pointer">
+        <div class="relative overflow-hidden rounded-sm mb-4">
+          <img src="images/project-foundation.png" alt="Soweto housing scheme foundation work" class="w-full h-64 object-cover transform group-hover:scale-105 transition-transform duration-500">
+          <span class="absolute top-4 left-4 bg-ochre text-white text-xs font-bold px-3 py-1 rounded-sm">Housing</span>
+        </div>
+        <h3 class="text-lg font-bold text-ink mb-1">Soweto Housing Scheme</h3>
+        <p class="text-ink-soft text-sm">48-unit NHBRC-enrolled residential development, completed 2025.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials -->
+<section class="py-24 bg-white border-t border-black/5">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-2xl mx-auto mb-16">
+      <span class="eyebrow">Client Feedback</span>
+      <h2 class="text-4xl md:text-5xl font-black text-ink mt-3" style="font-family:'Archivo',sans-serif;">What clients say</h2>
+    </div>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="bg-concrete-2 bg-[#F7F4EE] p-8 rounded-sm border border-black/5">
+        <div class="flex gap-1 mb-4 text-ochre">
+          <i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i>
+        </div>
+        <p class="text-ink-soft mb-6 text-sm leading-relaxed">Madzonga kept us updated weekly without us having to chase them. The final invoice matched the original quote almost line for line.</p>
+        <div class="flex items-center gap-3">
+          <div class="w-11 h-11 bg-ironstone rounded-full flex items-center justify-center font-bold text-white text-sm">TN</div>
+          <div>
+            <div class="font-bold text-ink text-sm">T. Nkosi</div>
+            <div class="text-ink-soft text-xs">Development Manager, property fund</div>
+          </div>
+        </div>
+      </div>
+      <div class="bg-[#F7F4EE] p-8 rounded-sm border border-black/5">
+        <div class="flex gap-1 mb-4 text-ochre">
+          <i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i>
+        </div>
+        <p class="text-ink-soft mb-6 text-sm leading-relaxed">We needed the electrical and civil teams to coordinate on the same site, and having them under one company made scheduling much simpler.</p>
+        <div class="flex items-center gap-3">
+          <div class="w-11 h-11 bg-ironstone rounded-full flex items-center justify-center font-bold text-white text-sm">RM</div>
+          <div>
+            <div class="font-bold text-ink text-sm">R. Meyer</div>
+            <div class="text-ink-soft text-xs">Facilities Director, logistics firm</div>
+          </div>
+        </div>
+      </div>
+      <div class="bg-[#F7F4EE] p-8 rounded-sm border border-black/5">
+        <div class="flex gap-1 mb-4 text-ochre">
+          <i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i>
+        </div>
+        <p class="text-ink-soft mb-6 text-sm leading-relaxed">Good communication from the site manager throughout, and they flagged a drainage issue before it became a real problem.</p>
+        <div class="flex items-center gap-3">
+          <div class="w-11 h-11 bg-ironstone rounded-full flex items-center justify-center font-bold text-white text-sm">PD</div>
+          <div>
+            <div class="font-bold text-ink text-sm">P. Dlamini</div>
+            <div class="text-ink-soft text-xs">Homeowner, Soweto housing scheme</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="py-24 grain-bg relative overflow-hidden">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+    <h2 class="text-4xl md:text-5xl font-black text-white mb-6" style="font-family:'Archivo',sans-serif;">Have a site that needs building?</h2>
+    <p class="text-lg text-white/70 mb-10">Tell us about the project and we'll come back with a scoped quote — no obligation.</p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a href="contact.html" class="inline-flex items-center justify-center gap-2 btn-primary text-base font-bold px-10 py-4 rounded-sm transition-colors">
+        <i data-lucide="mail" class="w-4 h-4"></i><span>Request a Quote</span>
+      </a>
+      <a href="tel:+27110000000" class="inline-flex items-center justify-center gap-2 bg-transparent border border-white/25 hover:border-white/60 text-white text-base font-semibold px-10 py-4 rounded-sm transition-colors">
+        <i data-lucide="phone-call" class="w-4 h-4"></i><span>011 000 0000</span>
+      </a>
     </div>
   </div>
 </section>
