@@ -1,100 +1,290 @@
-/* ============================================================
-   Madzonga Holdings — Design System
-   Palette: ironstone charcoal, burnt ochre, steel blue, concrete
-   ============================================================ */
 
 :root {
   --ironstone: #102A3B;
   --ironstone-2: #16374C;
   --ochre: #FF3131;
-  --ochre-light: #FF5C5C;
+  --ochre-light: #ff5757;
   --steel: #0B73B0;
-  --steel-light: #4DA3D9;
   --concrete: #F2F4F6;
   --concrete-2: #F7F8FA;
   --paper: #FBFBFA;
   --ink: #16232B;
   --ink-soft: #55636B;
-  --yellow: #EFDD53;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 88px;
 }
 
 body {
   font-family: 'Inter', sans-serif;
-  background-color: var(--paper);
+  background: var(--paper);
   color: var(--ink);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 h1, h2, h3, h4, .display {
   font-family: 'Archivo', sans-serif;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.025em;
 }
 
-/* Blueprint corner marks — the signature motif.
-   Small crosshair registration marks, like reference points
-   on a site drawing, placed at section corners. */
-.blueprint-mark {
-  position: relative;
+img {
+  display: block;
+  max-width: 100%;
 }
-.blueprint-mark::before,
-.blueprint-mark::after {
-  content: "";
-  position: absolute;
-  width: 18px;
-  height: 18px;
-  border-color: var(--ochre);
-  opacity: 0.55;
+
+::selection {
+  background: var(--ochre);
+  color: #fff;
 }
-.blueprint-mark::before {
-  top: 0; left: 0;
-  border-top: 2px solid var(--ochre);
-  border-left: 2px solid var(--ochre);
+
+/* Navigation */
+#navbar {
+  background: rgba(16, 42, 59, 0.78) !important;
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border-bottom-color: rgba(255,255,255,.08);
 }
-.blueprint-mark::after {
-  bottom: 0; right: 0;
-  border-bottom: 2px solid var(--ochre);
-  border-right: 2px solid var(--ochre);
+
+#navbar.nav-scrolled {
+  background: rgba(16, 42, 59, 0.96) !important;
+  box-shadow: 0 12px 35px rgba(0,0,0,.18);
+}
+
+#navbar img {
+  width: auto;
+  max-height: 54px;
+  object-fit: contain;
+}
+
+#mobile-menu {
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+#mobile-menu a {
+  border-radius: .75rem;
+}
+
+#mobile-menu a:hover {
+  background: rgba(255,255,255,.06);
+}
+
+/* Buttons and interactive elements */
+.btn-primary {
+  background: var(--ochre);
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(255,49,49,.16);
+}
+
+.btn-primary:hover {
+  background: var(--ochre-light);
+  transform: translateY(-1px);
+  box-shadow: 0 12px 25px rgba(255,49,49,.22);
+}
+
+a, button, input, select, textarea {
+  transition: color .2s ease, background-color .2s ease, border-color .2s ease,
+              box-shadow .2s ease, transform .2s ease, opacity .2s ease;
+}
+
+button:focus-visible, a:focus-visible, input:focus-visible,
+select:focus-visible, textarea:focus-visible {
+  outline: 3px solid rgba(255,49,49,.35);
+  outline-offset: 3px;
+}
+
+/* Construction-inspired background */
+.grain-bg {
+  background-color: var(--ironstone);
+  background-image:
+    radial-gradient(circle at 15% 20%, rgba(11,115,176,.18), transparent 30%),
+    radial-gradient(circle at 85% 70%, rgba(255,49,49,.10), transparent 28%),
+    linear-gradient(rgba(16,42,59,.91), rgba(16,42,59,.96)),
+    repeating-linear-gradient(45deg, rgba(255,255,255,.025) 0 2px, transparent 2px 42px);
 }
 
 .eyebrow {
   font-family: 'Archivo', sans-serif;
-  font-weight: 700;
-  letter-spacing: 0.14em;
+  font-weight: 800;
+  letter-spacing: .16em;
   text-transform: uppercase;
-  font-size: 0.78rem;
+  font-size: .72rem;
   color: var(--ochre);
 }
 
-.grain-bg {
-  background-color: var(--ironstone);
-  background-image:
-    linear-gradient(rgba(16,42,59,0.92), rgba(16,42,59,0.92)),
-    repeating-linear-gradient(45deg, rgba(255,255,255,0.02) 0 2px, transparent 2px 40px);
+.blueprint-mark {
+  position: relative;
 }
 
-.nav-scrolled {
-  background-color: rgba(16, 42, 59, 0.97);
-  backdrop-filter: blur(10px);
-  box-shadow: 0 4px 20px -4px rgba(0,0,0,0.35);
+.blueprint-mark::before,
+.blueprint-mark::after {
+  content: "";
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  border-color: var(--ochre);
+  opacity: .6;
+  pointer-events: none;
 }
 
-.btn-primary {
-  background-color: var(--ochre);
-  color: #fff;
+.blueprint-mark::before {
+  top: 0;
+  left: 0;
+  border-top: 2px solid var(--ochre);
+  border-left: 2px solid var(--ochre);
 }
-.btn-primary:hover { background-color: var(--ochre-light); }
 
+.blueprint-mark::after {
+  bottom: 0;
+  right: 0;
+  border-bottom: 2px solid var(--ochre);
+  border-right: 2px solid var(--ochre);
+}
+
+/* Cards */
 .card-hover {
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  border-radius: 1rem !important;
+  border-color: rgba(16,42,59,.08) !important;
+  box-shadow: 0 8px 25px rgba(16,42,59,.045);
 }
+
 .card-hover:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 20px 40px -12px rgba(28,26,23,0.25);
+  transform: translateY(-7px);
+  box-shadow: 0 24px 50px rgba(16,42,59,.12);
+}
+
+.card-hover img,
+main img {
+  transition: transform .5s cubic-bezier(.2,.7,.2,1);
+}
+
+.group:hover img {
+  transform: scale(1.025);
+}
+
+.rounded-sm {
+  border-radius: .9rem !important;
+}
+
+/* Image treatment */
+.blueprint-mark > img {
+  min-height: 280px;
+  object-fit: cover;
+  border-radius: .8rem !important;
+}
+
+section img {
+  border-radius: .9rem;
+}
+
+/* Form */
+input, select, textarea {
+  border-radius: .75rem !important;
+  border-color: rgba(16,42,59,.12) !important;
+  box-shadow: 0 2px 10px rgba(16,42,59,.025);
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: var(--ochre) !important;
+  box-shadow: 0 0 0 4px rgba(255,49,49,.08);
+}
+
+textarea {
+  resize: vertical;
+}
+
+/* Footer */
+footer {
+  position: relative;
+}
+
+footer a:hover {
+  transform: translateY(-1px);
 }
 
 .divider-ruler {
   height: 1px;
-  background: repeating-linear-gradient(90deg, var(--ink-soft) 0 8px, transparent 8px 16px);
-  opacity: 0.35;
+  background: repeating-linear-gradient(90deg, rgba(255,255,255,.45) 0 8px, transparent 8px 16px);
+  opacity: .35;
 }
 
-::selection { background: var(--ochre); color: #fff; }
+/* Make the large Tailwind sections feel less oversized on smaller screens */
+@media (max-width: 767px) {
+  section.py-24 {
+    padding-top: 4.5rem !important;
+    padding-bottom: 4.5rem !important;
+  }
+
+  section.pt-40 {
+    padding-top: 8.5rem !important;
+  }
+
+  section.pb-20 {
+    padding-bottom: 4.5rem !important;
+  }
+
+  section .text-4xl {
+    font-size: 2.25rem;
+    line-height: 1.08;
+  }
+
+  section .text-5xl {
+    font-size: 2.45rem;
+    line-height: 1.06;
+  }
+
+  section .text-6xl {
+    font-size: 2.7rem;
+    line-height: 1.02;
+  }
+
+  section .text-xl {
+    font-size: 1rem;
+    line-height: 1.65;
+  }
+
+  .blueprint-mark > img {
+    height: 300px !important;
+    min-height: 0;
+  }
+
+  #navbar img {
+    max-height: 46px;
+    max-width: 180px;
+  }
+
+  footer .grid {
+    gap: 2.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  #navbar .h-20 {
+    height: 4.5rem;
+  }
+
+  section .px-4 {
+    padding-left: 1.1rem;
+    padding-right: 1.1rem;
+  }
+
+  .blueprint-mark > img {
+    height: 260px !important;
+  }
+
+  .btn-primary {
+    box-shadow: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    transition-duration: .01ms !important;
+    animation-duration: .01ms !important;
+  }
+}
