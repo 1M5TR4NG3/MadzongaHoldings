@@ -1,0 +1,100 @@
+/* ============================================================
+   Madzonga Holdings — Design System
+   Palette: ironstone charcoal, burnt ochre, steel blue, concrete
+   ============================================================ */
+
+:root {
+  --ironstone: #102A3B;
+  --ironstone-2: #16374C;
+  --ochre: #FF3131;
+  --ochre-light: #FF5C5C;
+  --steel: #0B73B0;
+  --steel-light: #4DA3D9;
+  --concrete: #F2F4F6;
+  --concrete-2: #F7F8FA;
+  --paper: #FBFBFA;
+  --ink: #16232B;
+  --ink-soft: #55636B;
+  --yellow: #EFDD53;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--paper);
+  color: var(--ink);
+}
+
+h1, h2, h3, h4, .display {
+  font-family: 'Archivo', sans-serif;
+  letter-spacing: -0.01em;
+}
+
+/* Blueprint corner marks — the signature motif.
+   Small crosshair registration marks, like reference points
+   on a site drawing, placed at section corners. */
+.blueprint-mark {
+  position: relative;
+}
+.blueprint-mark::before,
+.blueprint-mark::after {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border-color: var(--ochre);
+  opacity: 0.55;
+}
+.blueprint-mark::before {
+  top: 0; left: 0;
+  border-top: 2px solid var(--ochre);
+  border-left: 2px solid var(--ochre);
+}
+.blueprint-mark::after {
+  bottom: 0; right: 0;
+  border-bottom: 2px solid var(--ochre);
+  border-right: 2px solid var(--ochre);
+}
+
+.eyebrow {
+  font-family: 'Archivo', sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+  color: var(--ochre);
+}
+
+.grain-bg {
+  background-color: var(--ironstone);
+  background-image:
+    linear-gradient(rgba(16,42,59,0.92), rgba(16,42,59,0.92)),
+    repeating-linear-gradient(45deg, rgba(255,255,255,0.02) 0 2px, transparent 2px 40px);
+}
+
+.nav-scrolled {
+  background-color: rgba(16, 42, 59, 0.97);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px -4px rgba(0,0,0,0.35);
+}
+
+.btn-primary {
+  background-color: var(--ochre);
+  color: #fff;
+}
+.btn-primary:hover { background-color: var(--ochre-light); }
+
+.card-hover {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px -12px rgba(28,26,23,0.25);
+}
+
+.divider-ruler {
+  height: 1px;
+  background: repeating-linear-gradient(90deg, var(--ink-soft) 0 8px, transparent 8px 16px);
+  opacity: 0.35;
+}
+
+::selection { background: var(--ochre); color: #fff; }

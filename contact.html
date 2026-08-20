@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | Madzonga Holdings</title>
+<meta name="description" content="Get a quote from Madzonga Holdings. Call, email or send project details through our contact form.">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/lucide@latest"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script>
+  tailwind.config = { theme: { extend: { colors: { ironstone: '#102A3B', ochre: '#FF3131', steel: '#0B73B0', concrete: '#F2F4F6' } } } }
+</script>
+</head>
+<body class="text-ink">
+
+<nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-ironstone/95 border-b border-white/10">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center h-20">
+      <a href="index.html" class="flex items-center">
+        <img src="images/logo.png" alt="Madzonga Holdings" class="h-14 w-auto">
+      </a>
+      <div class="hidden md:flex items-center gap-8">
+        <a href="index.html" class="text-white/70 hover:text-white transition-colors font-medium text-sm">Home</a>
+        <a href="about.html" class="text-white/70 hover:text-white transition-colors font-medium text-sm">About</a>
+        <a href="services.html" class="text-white/70 hover:text-white transition-colors font-medium text-sm">Services</a>
+        <a href="contact.html" class="text-ochre font-semibold text-sm">Contact Us</a>
+      </div>
+      <button id="mobile-menu-btn" class="md:hidden text-white p-2"><i data-lucide="menu" class="w-6 h-6"></i></button>
+    </div>
+  </div>
+  <div id="mobile-menu" class="hidden md:hidden bg-ironstone border-t border-white/10">
+    <div class="px-4 pt-2 pb-6 space-y-1">
+      <a href="index.html" class="block px-3 py-3 text-white/70">Home</a>
+      <a href="about.html" class="block px-3 py-3 text-white/70">About</a>
+      <a href="services.html" class="block px-3 py-3 text-white/70">Services</a>
+      <a href="contact.html" class="block px-3 py-3 text-ochre font-semibold">Contact Us</a>
+    </div>
+  </div>
+</nav>
+
+<!-- Header -->
+<section class="pt-40 pb-16 grain-bg">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <span class="eyebrow">Get In Touch</span>
+    <h1 class="text-4xl md:text-6xl font-black text-white mt-3 mb-6" style="font-family:'Archivo',sans-serif;">Let's talk about your site.</h1>
+    <p class="text-xl text-white/70 max-w-2xl">Send project details and we'll come back with a scoped quote — usually within two working days.</p>
+  </div>
+</section>
+
+<!-- Contact grid -->
+<section class="py-24 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid lg:grid-cols-5 gap-12">
+
+      <!-- Form -->
+      <div class="lg:col-span-3 bg-[#F7F4EE] p-8 md:p-10 rounded-sm border border-black/5">
+        <h2 class="text-2xl font-black text-ink mb-2" style="font-family:'Archivo',sans-serif;">Request a quote</h2>
+        <p class="text-ink-soft mb-8 text-sm">Fields marked with * are required. This form doesn't submit anywhere yet — wire it up to your email service or a backend before it goes live.</p>
+        <div class="space-y-5">
+          <div class="grid sm:grid-cols-2 gap-5">
+            <div>
+              <label class="block text-sm font-semibold text-ink mb-2">Full name *</label>
+              <input type="text" class="w-full px-4 py-3 rounded-sm border border-black/10 focus:outline-none focus:border-ochre bg-white text-sm" placeholder="Your name">
+            </div>
+            <div>
+              <label class="block text-sm font-semibold text-ink mb-2">Phone number *</label>
+              <input type="tel" class="w-full px-4 py-3 rounded-sm border border-black/10 focus:outline-none focus:border-ochre bg-white text-sm" placeholder="082 000 0000">
+            </div>
+          </div>
+          <div>
+            <label class="block text-sm font-semibold text-ink mb-2">Email *</label>
+            <input type="email" class="w-full px-4 py-3 rounded-sm border border-black/10 focus:outline-none focus:border-ochre bg-white text-sm" placeholder="you@example.com">
+          </div>
+          <div>
+            <label class="block text-sm font-semibold text-ink mb-2">Which division do you need?</label>
+            <select class="w-full px-4 py-3 rounded-sm border border-black/10 focus:outline-none focus:border-ochre bg-white text-sm">
+              <option>Building &amp; Civil Construction</option>
+              <option>Renovations &amp; Refurbishment</option>
+              <option>Electrical &amp; Mechanical</option>
+              <option>Not sure yet</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-sm font-semibold text-ink mb-2">Project details *</label>
+            <textarea rows="5" class="w-full px-4 py-3 rounded-sm border border-black/10 focus:outline-none focus:border-ochre bg-white text-sm" placeholder="Tell us about the site, scope and rough timeline"></textarea>
+          </div>
+          <button type="button" class="w-full inline-flex items-center justify-center gap-2 btn-primary text-base font-bold px-8 py-4 rounded-sm transition-colors">
+            Send Enquiry <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Details -->
+      <div class="lg:col-span-2 space-y-8">
+        <div>
+          <h3 class="text-lg font-bold text-ink mb-4">Head office</h3>
+          <div class="space-y-4">
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 bg-ochre/10 rounded-sm flex items-center justify-center flex-shrink-0"><i data-lucide="map-pin" class="w-5 h-5 text-ochre"></i></div>
+              <p class="text-ink-soft text-sm pt-2">142 Kelvin Drive, Woodmead, Johannesburg, 2191</p>
+            </div>
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 bg-ochre/10 rounded-sm flex items-center justify-center flex-shrink-0"><i data-lucide="phone" class="w-5 h-5 text-ochre"></i></div>
+              <p class="text-ink-soft text-sm pt-2">011 000 0000</p>
+            </div>
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 bg-ochre/10 rounded-sm flex items-center justify-center flex-shrink-0"><i data-lucide="mail" class="w-5 h-5 text-ochre"></i></div>
+              <p class="text-ink-soft text-sm pt-2">info@madzongaholdings.co.za</p>
+            </div>
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 bg-ochre/10 rounded-sm flex items-center justify-center flex-shrink-0"><i data-lucide="clock" class="w-5 h-5 text-ochre"></i></div>
+              <p class="text-ink-soft text-sm pt-2">Mon – Fri, 07:00 – 17:00<br>Sat by appointment</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="rounded-sm overflow-hidden border border-black/10">
+          <iframe
+            src="https://www.google.com/maps?q=Woodmead,Johannesburg,South+Africa&output=embed"
+            width="100%" height="260" style="border:0;" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade" title="Madzonga Holdings location map">
+          </iframe>
+        </div>
+
+        <div class="bg-ironstone p-6 rounded-sm">
+          <h4 class="text-white font-bold mb-2 text-sm">Prefer to call?</h4>
+          <p class="text-white/50 text-sm mb-4">Office lines are open weekdays 07:00–17:00.</p>
+          <a href="tel:+27110000000" class="inline-flex items-center gap-2 btn-primary text-sm font-bold px-5 py-3 rounded-sm transition-colors">
+            <i data-lucide="phone-call" class="w-4 h-4"></i> 011 000 0000
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-ironstone text-white/70 border-t border-white/10">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <div class="grid md:grid-cols-4 gap-12">
+      <div>
+        <div class="mb-6">
+          <img src="images/logo.png" alt="Madzonga Holdings" class="h-16 w-auto">
+        </div>
+        <p class="text-white/50 mb-6 text-sm leading-relaxed">A Johannesburg-based construction group delivering building, civil and installation work across South Africa.</p>
+        <div class="flex gap-3">
+          <a href="#" class="w-9 h-9 bg-white/5 rounded-sm flex items-center justify-center hover:bg-ochre transition-colors"><i data-lucide="linkedin" class="w-4 h-4"></i></a>
+          <a href="#" class="w-9 h-9 bg-white/5 rounded-sm flex items-center justify-center hover:bg-ochre transition-colors"><i data-lucide="facebook" class="w-4 h-4"></i></a>
+          <a href="#" class="w-9 h-9 bg-white/5 rounded-sm flex items-center justify-center hover:bg-ochre transition-colors"><i data-lucide="instagram" class="w-4 h-4"></i></a>
+        </div>
+      </div>
+      <div>
+        <h4 class="text-white font-bold mb-4 text-sm uppercase tracking-wide">Services</h4>
+        <ul class="space-y-3 text-sm">
+          <li><a href="services.html#building-civil" class="hover:text-ochre transition-colors">Building &amp; Civil Construction</a></li>
+          <li><a href="services.html#renovations" class="hover:text-ochre transition-colors">Renovations &amp; Refurbishment</a></li>
+          <li><a href="services.html#electrical-mechanical" class="hover:text-ochre transition-colors">Electrical &amp; Mechanical</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-white font-bold mb-4 text-sm uppercase tracking-wide">Company</h4>
+        <ul class="space-y-3 text-sm">
+          <li><a href="about.html" class="hover:text-ochre transition-colors">About Us</a></li>
+          <li><a href="contact.html" class="hover:text-ochre transition-colors">Careers</a></li>
+          <li><a href="contact.html" class="hover:text-ochre transition-colors">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-white font-bold mb-4 text-sm uppercase tracking-wide">Contact</h4>
+        <ul class="space-y-3 text-sm">
+          <li class="flex items-start gap-3"><i data-lucide="map-pin" class="w-4 h-4 text-ochre mt-0.5"></i><span>142 Kelvin Drive, Woodmead, Johannesburg</span></li>
+          <li class="flex items-center gap-3"><i data-lucide="phone" class="w-4 h-4 text-ochre"></i><span>011 000 0000</span></li>
+          <li class="flex items-center gap-3"><i data-lucide="mail" class="w-4 h-4 text-ochre"></i><span>info@madzongaholdings.co.za</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="divider-ruler mt-12 mb-8"></div>
+    <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+      <p class="text-white/40 text-xs">&copy; 2026 Madzonga Holdings (Pty) Ltd. All rights reserved.</p>
+      <div class="flex gap-6 text-xs text-white/40">
+        <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+        <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  lucide.createIcons();
+  const btn = document.getElementById('mobile-menu-btn');
+  const menu = document.getElementById('mobile-menu');
+  btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => navbar.classList.toggle('nav-scrolled', window.scrollY > 50));
+</script>
+</body>
+</html>
