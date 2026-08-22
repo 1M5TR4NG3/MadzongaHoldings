@@ -288,3 +288,17 @@ footer a:hover {
     animation-duration: .01ms !important;
   }
 }
+
+/* Mobile sticky call-to-action bar */
+.mobile-cta-bar {
+  background: #fff;
+  border-top: 1px solid rgba(16,42,59,.08);
+  box-shadow: 0 -8px 24px rgba(16,42,59,.12);
+  padding-bottom: env(safe-area-inset-bottom, 0);
+}
+
+@media (max-width: 767px) {
+  body {
+    padding-bottom: 60px;
+  }
+}
