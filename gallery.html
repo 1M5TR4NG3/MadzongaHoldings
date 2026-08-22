@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gallery | Madzonga Holdings</title>
+<meta name="description" content="Photos of Madzonga Holdings' building, civil, renovation and electrical work across Gauteng.">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/lucide@latest"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" href="images/logo.png" type="image/png">
+<script>
+  tailwind.config = { theme: { extend: { colors: { ironstone: '#102A3B', ochre: '#FF3131', steel: '#0B73B0', concrete: '#F2F4F6' } } } }
+</script>
+</head>
+<body class="text-ink">
+
+<nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-ironstone/95 border-b border-white/10">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center h-20">
+      <a href="index.html" class="flex items-center">
+        <img src="images/logo.png" alt="Madzonga Holdings" class="h-14 w-auto">
+      </a>
+      <div class="hidden md:flex items-center gap-8">
+        <a href="index.html" class="text-white/70 hover:text-white transition-colors font-medium text-sm">Home</a>
+        <a href="about.html" class="text-white/70 hover:text-white transition-colors font-medium text-sm">About</a>
+        <a href="services.html" class="text-white/70 hover:text-white transition-colors font-medium text-sm">Services</a>
+        <a href="gallery.html" class="text-ochre font-semibold text-sm">Gallery</a>
+        <a href="contact.html" class="btn-primary px-6 py-2.5 rounded-sm font-bold text-sm transition-colors">Request a Quote</a>
+      </div>
+      <button id="mobile-menu-btn" class="md:hidden text-white p-2 rounded-lg hover:bg-white/10" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-menu"><i data-lucide="menu" class="w-6 h-6"></i></button>
+    </div>
+  </div>
+  <div id="mobile-menu" class="hidden md:hidden bg-ironstone border-t border-white/10">
+    <div class="px-4 pt-2 pb-6 space-y-1">
+      <a href="index.html" class="block px-3 py-3 text-white/70">Home</a>
+      <a href="about.html" class="block px-3 py-3 text-white/70">About</a>
+      <a href="services.html" class="block px-3 py-3 text-white/70">Services</a>
+      <a href="gallery.html" class="block px-3 py-3 text-ochre font-semibold">Gallery</a>
+      <a href="contact.html" class="block px-3 py-3 btn-primary rounded-sm text-center font-bold mt-3">Request a Quote</a>
+    </div>
+  </div>
+</nav>
+
+<!-- Header -->
+<section class="pt-40 pb-16 grain-bg text-center">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <span class="eyebrow">Our Work</span>
+    <h1 class="text-4xl md:text-6xl font-black text-white mt-3 mb-6" style="font-family:'Archivo',sans-serif;">A look at the work on the ground.</h1>
+    <p class="text-xl text-white/70 max-w-3xl mx-auto">Photos from building, civil, renovation and electrical projects. Tap any photo to view it larger.</p>
+  </div>
+</section>
+
+<!-- Filters -->
+<section class="bg-white pt-10 pb-4 sticky top-20 z-30 border-b border-black/5">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div id="filter-bar" class="flex flex-wrap gap-3 justify-center">
+      <button data-filter="all" class="filter-btn active-filter px-5 py-2 rounded-full text-sm font-semibold transition-colors">All Work</button>
+      <button data-filter="building-civil" class="filter-btn px-5 py-2 rounded-full text-sm font-semibold transition-colors">Building &amp; Civil</button>
+      <button data-filter="renovations" class="filter-btn px-5 py-2 rounded-full text-sm font-semibold transition-colors">Renovations</button>
+      <button data-filter="electrical" class="filter-btn px-5 py-2 rounded-full text-sm font-semibold transition-colors">Electrical &amp; Mechanical</button>
+    </div>
+  </div>
+</section>
+
+<!-- Gallery grid -->
+<section class="py-16 bg-concrete">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <p class="text-ink-soft text-sm text-center mb-10 max-w-2xl mx-auto">These are example photos included with the site template. Swap them out for real photos of your own completed work whenever you have them.</p>
+
+    <div id="gallery-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      <button class="gallery-item group relative rounded-sm overflow-hidden shadow-lg" data-category="building-civil" data-caption="New-build civil works in progress" data-src="images/project-towers.png">
+        <img src="images/project-towers.png" alt="New-build civil construction site" class="w-full h-64 object-cover transform group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
+        <div class="gallery-overlay">
+          <span class="text-white text-xs font-semibold uppercase tracking-wide bg-ochre px-2 py-1 rounded-sm">Building &amp; Civil</span>
+          <p class="text-white font-bold mt-2">New-build civil works</p>
+        </div>
+      </button>
+
+      <button class="gallery-item group relative rounded-sm overflow-hidden shadow-lg" data-category="building-civil" data-caption="Foundation and groundworks stage" data-src="images/project-foundation.png">
+        <img src="images/project-foundation.png" alt="Foundation and groundworks" class="w-full h-64 object-cover transform group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
+        <div class="gallery-overlay">
+          <span class="text-white text-xs font-semibold uppercase tracking-wide bg-ochre px-2 py-1 rounded-sm">Building &amp; Civil</span>
+          <p class="text-white font-bold mt-2">Foundation &amp; groundworks</p>
+        </div>
+      </button>
+
+      <button class="gallery-item group relative rounded-sm overflow-hidden shadow-lg" data-category="building-civil" data-caption="Site team laying blockwork" data-src="images/team-blockwork.png">
+        <img src="images/team-blockwork.png" alt="Site team laying blockwork" class="w-full h-64 object-cover transform group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
+        <div class="gallery-overlay">
+          <span class="text-white text-xs font-semibold uppercase tracking-wide bg-ochre px-2 py-1 rounded-sm">Building &amp; Civil</span>
+          <p class="text-white font-bold mt-2">Blockwork on site</p>
+        </div>
+      </button>
+
+      <button class="gallery-item group relative rounded-sm overflow-hidden shadow-lg" data-category="renovations" data-caption="Office refurbishment, plastering stage" data-src="images/project-refurb-plaster.png">
+        <img src="images/project-refurb-plaster.png" alt="Office refurbishment plastering" class="w-full h-64 object-cover transform group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
+        <div class="gallery-overlay">
+          <span class="text-white text-xs font-semibold uppercase tracking-wide bg-ochre px-2 py-1 rounded-sm">Renovations</span>
+          <p class="text-white font-bold mt-2">Office refurbishment</p>
+        </div>
+      </button>
+
+      <button class="gallery-item group relative rounded-sm overflow-hidden shadow-lg" data-category="renovations" data-caption="Interior renovation, ceiling finishing" data-src="images/service-renovations-ceiling.png">
+        <img src="images/service-renovations-ceiling.png" alt="Interior renovation ceiling finishing" class="w-full h-64 object-cover transform group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
+        <div class="gallery-overlay">
+          <span class="text-white text-xs font-semibold uppercase tracking-wide bg-ochre px-2 py-1 rounded-sm">Renovations</span>
+          <p class="text-white font-bold mt-2">Ceiling &amp; interior finishing</p>
+        </div>
+      </button>
+
+      <button class="gallery-item group relative rounded-sm overflow-hidden shadow-lg" data-category="electrical" data-caption="Electrical wiring installation" data-src="images/service-electrical-wiring.png">
+        <img src="images/service-electrical-wiring.png" alt="Electrical wiring installation" class="w-full h-64 object-cover transform group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
+        <div class="gallery-overlay">
+          <span class="text-white text-xs font-semibold uppercase tracking-wide bg-ochre px-2 py-1 rounded-sm">Electrical &amp; Mechanical</span>
+          <p class="text-white font-bold mt-2">Wiring installation</p>
+        </div>
+      </button>
+
+      <button class="gallery-item group relative rounded-sm overflow-hidden shadow-lg" data-category="building-civil" data-caption="Project planning and site layout" data-src="images/story-blueprints.png">
+        <img src="images/story-blueprints.png" alt="Project planning and site layout" class="w-full h-64 object-cover transform group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
+        <div class="gallery-overlay">
+          <span class="text-white text-xs font-semibold uppercase tracking-wide bg-ochre px-2 py-1 rounded-sm">Building &amp; Civil</span>
+          <p class="text-white font-bold mt-2">Planning &amp; site layout</p>
+        </div>
+      </button>
+
+      <button class="gallery-item group relative rounded-sm overflow-hidden shadow-lg" data-category="building-civil" data-caption="Site at sunset" data-src="images/hero-crane-sunset.png">
+        <img src="images/hero-crane-sunset.png" alt="Construction site with crane at sunset" class="w-full h-64 object-cover transform group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
+        <div class="gallery-overlay">
+          <span class="text-white text-xs font-semibold uppercase tracking-wide bg-ochre px-2 py-1 rounded-sm">Building &amp; Civil</span>
+          <p class="text-white font-bold mt-2">On site</p>
+        </div>
+      </button>
+
+    </div>
+
+    <p id="empty-state" class="hidden text-center text-ink-soft mt-12">No photos in this category yet.</p>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="py-20 bg-ironstone text-center">
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="text-3xl md:text-4xl font-black text-white mb-4" style="font-family:'Archivo',sans-serif;">Have a project in mind?</h2>
+    <p class="text-white/60 mb-8">Tell us what you're building and we'll turn around a quote within 2 working days.</p>
+    <a href="contact.html" class="inline-flex items-center gap-2 btn-primary px-8 py-4 rounded-sm font-bold transition-colors">Request a Quote <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-ironstone text-white/70 border-t border-white/10">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <div class="grid md:grid-cols-4 gap-12">
+      <div>
+        <div class="mb-6">
+          <img src="images/logo.png" alt="Madzonga Holdings" class="h-16 w-auto">
+        </div>
+        <p class="text-white/50 mb-6 text-sm leading-relaxed">A Gauteng-based construction group delivering building, civil and installation work across South Africa.</p>
+        <div class="flex gap-3">
+          <a href="#" class="w-9 h-9 bg-white/5 rounded-sm flex items-center justify-center hover:bg-ochre transition-colors"><i data-lucide="linkedin" class="w-4 h-4"></i></a>
+          <a href="#" class="w-9 h-9 bg-white/5 rounded-sm flex items-center justify-center hover:bg-ochre transition-colors"><i data-lucide="facebook" class="w-4 h-4"></i></a>
+          <a href="#" class="w-9 h-9 bg-white/5 rounded-sm flex items-center justify-center hover:bg-ochre transition-colors"><i data-lucide="instagram" class="w-4 h-4"></i></a>
+        </div>
+      </div>
+      <div>
+        <h4 class="text-white font-bold mb-4 text-sm uppercase tracking-wide">Services</h4>
+        <ul class="space-y-3 text-sm">
+          <li><a href="services.html#building-civil" class="hover:text-ochre transition-colors">Building &amp; Civil Construction</a></li>
+          <li><a href="services.html#renovations" class="hover:text-ochre transition-colors">Renovations &amp; Refurbishment</a></li>
+          <li><a href="services.html#electrical-mechanical" class="hover:text-ochre transition-colors">Electrical &amp; Mechanical</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-white font-bold mb-4 text-sm uppercase tracking-wide">Company</h4>
+        <ul class="space-y-3 text-sm">
+          <li><a href="about.html" class="hover:text-ochre transition-colors">About Us</a></li>
+          <li><a href="gallery.html" class="hover:text-ochre transition-colors">Gallery</a></li>
+          <li><a href="contact.html" class="hover:text-ochre transition-colors">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-white font-bold mb-4 text-sm uppercase tracking-wide">Contact</h4>
+        <ul class="space-y-3 text-sm">
+          <li class="flex items-start gap-3"><i data-lucide="map-pin" class="w-4 h-4 text-ochre mt-0.5"></i><span>15 Johannes Street, Kempton Park West, Kempton Park</span></li>
+          <li class="flex items-center gap-3"><i data-lucide="phone" class="w-4 h-4 text-ochre"></i><span>011 000 0000</span></li>
+          <li class="flex items-center gap-3"><i data-lucide="mail" class="w-4 h-4 text-ochre"></i><span>info@madzongaholdings.co.za</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="divider-ruler mt-12 mb-8"></div>
+    <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+      <p class="text-white/40 text-xs">&copy; 2026 Madzonga Holdings (Pty) Ltd. All rights reserved. &middot; Reg. No. 2024/165419/07</p>
+      <div class="flex gap-6 text-xs text-white/40">
+        <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+        <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- Mobile sticky call-to-action bar -->
+<div class="md:hidden fixed bottom-0 inset-x-0 z-40 mobile-cta-bar">
+  <div class="grid grid-cols-2">
+    <a href="tel:+27110000000" class="flex items-center justify-center gap-2 bg-ironstone text-white font-bold py-4 text-sm">
+      <i data-lucide="phone-call" class="w-4 h-4"></i> Call Us
+    </a>
+    <a href="contact.html" class="flex items-center justify-center gap-2 btn-primary text-white font-bold py-4 text-sm">
+      <i data-lucide="mail" class="w-4 h-4"></i> Get a Quote
+    </a>
+  </div>
+</div>
+
+<!-- Lightbox -->
+<div id="lightbox" class="lightbox hidden">
+  <button id="lightbox-close" aria-label="Close" class="lightbox-close"><i data-lucide="x" class="w-6 h-6"></i></button>
+  <button id="lightbox-prev" aria-label="Previous photo" class="lightbox-nav lightbox-prev"><i data-lucide="chevron-left" class="w-7 h-7"></i></button>
+  <button id="lightbox-next" aria-label="Next photo" class="lightbox-nav lightbox-next"><i data-lucide="chevron-right" class="w-7 h-7"></i></button>
+  <figure class="lightbox-figure">
+    <img id="lightbox-img" src="" alt="">
+    <figcaption id="lightbox-caption"></figcaption>
+  </figure>
+</div>
+
+<script>
+  lucide.createIcons();
+
+  const btn = document.getElementById('mobile-menu-btn');
+  const menu = document.getElementById('mobile-menu');
+  const navbar = document.getElementById('navbar');
+
+  if (btn && menu) {
+    const setMenu = (open) => {
+      menu.classList.toggle('hidden', !open);
+      btn.setAttribute('aria-expanded', String(open));
+      btn.setAttribute('aria-label', open ? 'Close navigation menu' : 'Open navigation menu');
+    };
+
+    btn.addEventListener('click', () => {
+      setMenu(menu.classList.contains('hidden'));
+    });
+
+    menu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => setMenu(false));
+    });
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') setMenu(false);
+    });
+  }
+
+  const updateNav = () => {
+    if (navbar) navbar.classList.toggle('nav-scrolled', window.scrollY > 30);
+  };
+
+  updateNav();
+  window.addEventListener('scroll', updateNav, { passive: true });
+
+  // Filtering
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const items = Array.from(document.querySelectorAll('.gallery-item'));
+  const emptyState = document.getElementById('empty-state');
+
+  function applyFilter(filter) {
+    let visibleCount = 0;
+    items.forEach(item => {
+      const show = filter === 'all' || item.dataset.category === filter;
+      item.style.display = show ? '' : 'none';
+      if (show) visibleCount++;
+    });
+    emptyState.classList.toggle('hidden', visibleCount !== 0);
+  }
+
+  filterBtns.forEach(fb => {
+    fb.addEventListener('click', () => {
+      filterBtns.forEach(b => b.classList.remove('active-filter'));
+      fb.classList.add('active-filter');
+      applyFilter(fb.dataset.filter);
+    });
+  });
+
+  // Lightbox
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  const lightboxCaption = document.getElementById('lightbox-caption');
+  const closeBtn = document.getElementById('lightbox-close');
+  const prevBtn = document.getElementById('lightbox-prev');
+  const nextBtn = document.getElementById('lightbox-next');
+  let currentIndex = 0;
+
+  function visibleItems() {
+    return items.filter(item => item.style.display !== 'none');
+  }
+
+  function openLightbox(index) {
+    const list = visibleItems();
+    if (!list.length) return;
+    currentIndex = (index + list.length) % list.length;
+    const item = list[currentIndex];
+    lightboxImg.src = item.dataset.src;
+    lightboxImg.alt = item.dataset.caption;
+    lightboxCaption.textContent = item.dataset.caption;
+    lightbox.classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeLightbox() {
+    lightbox.classList.add('hidden');
+    document.body.style.overflow = '';
+  }
+
+  items.forEach((item, i) => {
+    item.addEventListener('click', () => {
+      const list = visibleItems();
+      const idx = list.indexOf(item);
+      openLightbox(idx);
+    });
+  });
+
+  closeBtn.addEventListener('click', closeLightbox);
+  lightbox.addEventListener('click', (e) => { if (e.target === lightbox) closeLightbox(); });
+  prevBtn.addEventListener('click', () => openLightbox(currentIndex - 1));
+  nextBtn.addEventListener('click', () => openLightbox(currentIndex + 1));
+
+  document.addEventListener('keydown', (e) => {
+    if (lightbox.classList.contains('hidden')) return;
+    if (e.key === 'Escape') closeLightbox();
+    if (e.key === 'ArrowLeft') openLightbox(currentIndex - 1);
+    if (e.key === 'ArrowRight') openLightbox(currentIndex + 1);
+  });
+</script>
+</body>
+</html>
